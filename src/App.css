@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+    /* background-color: #282c34; */
+  /* background: linear-gradient(to bottom, #1b5e20 30%, #4caf50 90%); */
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html, body {
+  background: #333;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.svg-wrapper {
+  height: 60px;
+	margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #ff3f69;
+}
+
+.text {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 10px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+.logoStyle{
+  padding-bottom: 5rem;
+}
+
+.android{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
